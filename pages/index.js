@@ -10,12 +10,14 @@ export default function Home({ houses }) {
   return (
     <Layout title='Home'>
       <h1>Hello World</h1>
+
+      <h2>Featured Properties</h2>
       {houses.length > 0 &&
         houses.map(house => <HouseItem house={house} key={house.id} />)}
 
       {houses.length > 0 && (
         <Link href='/houses'>
-          <a>see all houses</a>
+          <a>see all properties</a>
         </Link>
       )}
     </Layout>

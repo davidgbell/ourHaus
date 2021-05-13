@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Header } from './Header';
 
 export const Layout = ({ children, title, keywords, description }) => {
   return (
@@ -19,7 +20,7 @@ export const Layout = ({ children, title, keywords, description }) => {
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <header>HEADER</header>
+      <Header />
       <div className='container'>{children}</div>
       <footer>FOOTER</footer>
     </div>
