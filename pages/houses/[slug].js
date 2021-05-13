@@ -6,25 +6,27 @@ import { formatDate } from '../../utils/formatDate';
 
 const house = ({ house }) => {
   return (
-    <Layout title={house.tile} description={house.description}>
-      <Image
-        src={house.image[0].url}
-        alt={house.title}
-        width={400}
-        height={300}
-      />
-      <h1>{house.title}</h1>
-      <p className='home-description'>{house.description}</p>
-      <div className='home-details'>
-        <p>Date available: {formatDate(house.dateAvailable)}</p>
-        <p>
-          Price: £ {house.price}
-          {house.type === 'rent' ? (
-            <span title='monthly payments'> monthly</span>
-          ) : null}
-        </p>
-        <p>Bedrooms: {house.bedrooms}</p>
-        <p>Bathrooms: {house.bathrooms}</p>
+    <Layout title={house.title} description={house.description}>
+      <h1 className='title'>{house.title}</h1>
+      <div className='house'>
+        <Image
+          src={house.image[0].url}
+          alt={house.title}
+          width={500}
+          height={300}
+        />
+        <p className='description'>{house.description}</p>
+        <div>
+          <p>Date available: {formatDate(house.dateAvailable)}</p>
+          <p>
+            Price: £ {house.price}
+            {house.type === 'rent' ? (
+              <span title='monthly payments'> monthly</span>
+            ) : null}
+          </p>
+          <p>Bedrooms: {house.bedrooms}</p>
+          <p>Bathrooms: {house.bathrooms}</p>
+        </div>
       </div>
       <div className='contact'>
         <h3>Interested</h3>

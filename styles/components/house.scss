@@ -1,0 +1,16 @@
+.house {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  .description {
+    line-height: 1.6;
+    color: $accents-2;
+  }
+}
+
+@media (min-width: 640px) {
+  .house {
+    grid-template-columns: 1fr 1fr;
+  }
+}

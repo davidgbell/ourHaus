@@ -1,0 +1,28 @@
+@import './variables';
+
+body {
+  background: $background;
+}
+
+.btn {
+  background: $alpha;
+  color: $white;
+  text-decoration: none;
+  font-size: 1.4rem;
+  padding: 0.25rem 1rem;
+  border-radius: 7px;
+  &:hover {
+    background: $alpha-light;
+    text-decoration: none;
+  }
+}
+
+.title {
+  font-size: 8vw;
+  margin-bottom: 1rem;
+}
+@media (min-width: 678px) {
+  .title {
+    font-size: 10vw;
+  }
+}

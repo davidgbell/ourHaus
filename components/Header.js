@@ -3,9 +3,13 @@ import React from 'react';
 
 export const Header = () => {
   return (
-    <div className='header-container'>
+    <div className='header'>
       <header>
-        <Link href='/'>ourHaus</Link>
+        <Link className='logo' href='/'>
+          <a className='logo' aria-label='home'>
+            ourHaus
+          </a>
+        </Link>
         <nav>
           <Link href='/sale'>
             <a>Buy</a>

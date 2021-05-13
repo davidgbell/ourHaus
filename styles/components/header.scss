@@ -1,0 +1,39 @@
+.header {
+  .logo {
+    margin: 20px 0;
+    font-size: 2rem;
+    text-decoration: none;
+    color: $alpha;
+  }
+  margin-bottom: 1.4rem;
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    text-align: center;
+    padding: 2rem 2rem;
+    nav {
+      display: flex;
+      margin: 20px 0;
+      a {
+        margin-left: 1rem;
+        text-decoration: none;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 657px) {
+  .header {
+    header {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+}

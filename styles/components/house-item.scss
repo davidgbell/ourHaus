@@ -1,0 +1,17 @@
+.house-item {
+  margin-bottom: 1.4rem;
+  h3 {
+    font-size: 5vw;
+    margin-top: 1rem;
+    margin-bottom: 1.4rem;
+  }
+  p {
+    color: $accents-2;
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
