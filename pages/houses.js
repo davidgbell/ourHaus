@@ -1,16 +1,16 @@
-import React from 'react';
 import { HouseItem } from '../components/HouseItem';
+import { Layout } from '../components/Layout';
 import { Pagination } from '../components/Pagination';
 import { API_URL, PER_PAGE } from '../config';
 
 const houses = ({ houses, total, page }) => {
   return (
-    <div>
+    <Layout title='Available homes'>
       {houses?.map(house => (
         <HouseItem key={house.id} house={house} />
       ))}
       <Pagination total={total} page={page} />
-    </div>
+    </Layout>
   );
 };
 export default houses;
