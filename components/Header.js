@@ -13,6 +13,9 @@ export const Header = () => {
           <Link href='/rent'>
             <a>Rent</a>
           </Link>
+          <Link href='/houses'>
+            <a>All properties</a>
+          </Link>
         </nav>
       </header>
     </div>

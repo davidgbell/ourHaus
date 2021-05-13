@@ -6,7 +6,6 @@ import { Layout } from '../components/Layout';
 import { API_URL } from '../config';
 
 export default function Home({ houses }) {
-  console.log(houses);
   return (
     <Layout title='Home'>
       <h1>Hello World</h1>

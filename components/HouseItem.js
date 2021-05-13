@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const HouseItem = ({ house }) => {
   return (
@@ -12,6 +13,9 @@ export const HouseItem = ({ house }) => {
       />
       <p>Bedrooms: {house.bedrooms}</p>
       <p>Bathrooms: {house.bathrooms}</p>
+      <Link href={`houses/${house.slug}`}>
+        <a>View</a>
+      </Link>
     </div>
   );
 };
