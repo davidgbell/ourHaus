@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const HouseItem = ({ house }) => {
   return (
-    <div>
+    <div className='house-item'>
       <h3>{house.title}</h3>
       <Image
         src={house.image[0].url}
