@@ -26,3 +26,13 @@ body {
     font-size: 10vw;
   }
 }
+
+.titleBravo {
+  font-size: 8vw;
+  margin-bottom: 1rem;
+}
+@media (min-width: 678px) {
+  .titleBravo {
+    font-size: 4rem;
+  }
+}
