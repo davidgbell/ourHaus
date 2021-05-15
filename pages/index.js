@@ -31,7 +31,6 @@ export default function Home({ houses }) {
           {houses.length > 0 &&
             houses.map(house => <HouseItem house={house} key={house.id} />)}
         </div>
-
         {houses.length > 0 && (
           <Link href='/houses'>
             <a className='btn' aria-label='Access all properties'>
@@ -40,12 +39,22 @@ export default function Home({ houses }) {
           </Link>
         )}
       </div>
+      <div className='feature-two'>
+        <div className='feature-two-text'>
+          <h3 className='titleBravo'>Leading standards since 2003</h3>
+          <p>
+            Our brokers are experts at finding a place anyone can make memories
+            in.
+          </p>
+        </div>
+        <Image src='/images/room-2.jpg' alt='flats' width={300} height={400} />
+      </div>
     </Layout>
   );
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(`${API_URL}/houses?featured=true&_limit=2`);
+  const res = await fetch(`${API_URL}/houses?featured=true&_limit=3`);
   const houses = await res.json();
 
   return {

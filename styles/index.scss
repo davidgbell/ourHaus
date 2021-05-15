@@ -92,10 +92,82 @@
     border-radius: 7px;
     border: none;
     height: 3rem;
-    margin-left: 1rem;
+    margin-top: 1rem;
     &:hover {
       background: $alpha-light;
       cursor: pointer;
     }
   }
+}
+
+@media only screen and (min-width: 654px) {
+  .search {
+    button {
+      margin-left: 1rem;
+      margin-top: 0;
+    }
+  }
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+  a {
+    margin-right: 1rem;
+  }
+}
+
+footer {
+  height: 10rem;
+  background: $black;
+  color: $white;
+  display: grid;
+  place-items: center;
+}
+
+.feature-two {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+  .feature-two-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $white;
+    background: $black;
+  }
+  .titleBravo {
+    margin-bottom: 2rem;
+  }
+  p {
+    margin-bottom: 3rem;
+  }
+  img {
+    object-fit: cover;
+    height: 100%;
+  }
+  p {
+  }
+}
+@media only screen and (min-width: 657px) {
+  .feature-two {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.social-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
 }

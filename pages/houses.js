@@ -6,9 +6,12 @@ import { API_URL, PER_PAGE } from '../config';
 const houses = ({ houses, total, page }) => {
   return (
     <Layout title='Available homes'>
-      {houses?.map(house => (
-        <HouseItem key={house.id} house={house} />
-      ))}
+      <h1 className='title'>All properties</h1>
+      <div className='page-wrapper'>
+        {houses?.map(house => (
+          <HouseItem key={house.id} house={house} />
+        ))}
+      </div>
       <Pagination total={total} page={page} />
     </Layout>
   );

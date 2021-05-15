@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Footer } from './Footer';
 import { Header } from './Header';
 
 export const Layout = ({ children, title, keywords, description }) => {
@@ -22,7 +23,7 @@ export const Layout = ({ children, title, keywords, description }) => {
       </Head>
       <Header />
       <div className='container'>{children}</div>
-      <footer>FOOTER</footer>
+      <Footer />
     </div>
   );
 };

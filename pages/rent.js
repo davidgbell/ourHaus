@@ -5,10 +5,12 @@ import { API_URL } from '../config';
 const rent = ({ houses }) => {
   return (
     <Layout title='Rent'>
-      <h1>Homes to rent</h1>
-      {houses?.map(house => (
-        <HouseItem key={house.id} house={house} />
-      ))}
+      <h1 className='title'>Homes to rent</h1>
+      <div className='page-wrapper'>
+        {houses?.map(house => (
+          <HouseItem key={house.id} house={house} />
+        ))}
+      </div>
     </Layout>
   );
 };
