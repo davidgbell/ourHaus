@@ -25,4 +25,4 @@ I wanted to keep the app clean and simple as the main focus is to display my abi
 ![Screenshot 4](/s4.png)
 ![Screenshot 5](/s5.png)
 
-<img src='/screenshots/s1.png' />
+<img src='/s1.png' />
