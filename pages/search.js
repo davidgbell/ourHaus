@@ -11,7 +11,9 @@ const searchPage = ({ houses }) => {
     <Layout title='Search results for houses'>
       <h1 className='title'>Search page</h1>
       {houses.length === 0 && (
-        <h3>No houses available to rent or buy with your search term</h3>
+        <h3 className='titleBravo'>
+          No houses available to rent or buy with your search term
+        </h3>
       )}
 
       {houses.map(house => (
@@ -35,7 +37,7 @@ export const getServerSideProps = async ({ query: { searchTerm } }) => {
   });
 
   const res = await fetch(`
-        ${API_URL}/houses?${query}`);
+  http://localhost:1337/houses?${query}`);
   const houses = await res.json();
 
   return {

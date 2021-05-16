@@ -36,15 +36,17 @@ export const HouseLocation = ({ house }) => {
   if (loading) return false;
 
   return (
-    <ReactMapGL
-      {...viewPort}
-      mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_KEY}
-      onViewportChange={vp => setViewPort(vp)}>
-      <Marker key={house.id} latitude={lat} longitude={lng}>
-        <span aria-label='house emoji' role='img'>
-          🏠
-        </span>
-      </Marker>
-    </ReactMapGL>
+    <div className='map-container'>
+      <ReactMapGL
+        {...viewPort}
+        mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_KEY}
+        onViewportChange={vp => setViewPort(vp)}>
+        <Marker key={house.id} latitude={lat} longitude={lng}>
+          <span aria-label='house emoji' role='img'>
+            🏠
+          </span>
+        </Marker>
+      </ReactMapGL>
+    </div>
   );
 };

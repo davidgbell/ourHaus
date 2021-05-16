@@ -3,6 +3,9 @@
 body {
   background: $background;
 }
+main {
+  min-height: 100vh;
+}
 
 .btn {
   background: $alpha;

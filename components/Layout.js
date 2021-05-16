@@ -22,7 +22,9 @@ export const Layout = ({ children, title, keywords, description }) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header />
-      <div className='container'>{children}</div>
+      <main>
+        <div className='container'>{children}</div>
+      </main>
       <Footer />
     </div>
   );

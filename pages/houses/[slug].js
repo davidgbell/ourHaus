@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import { HouseLocation } from '../../components/HouseLocation';
 import { Layout } from '../../components/Layout';
 import { API_URL } from '../../config';
 import { formatDate } from '../../utils/formatDate';
@@ -7,30 +8,39 @@ import { formatDate } from '../../utils/formatDate';
 const house = ({ house }) => {
   return (
     <Layout title={house.title} description={house.description}>
-      <h1 className='titleBravo'>{house.title}</h1>
-      <div className='house'>
-        <Image
-          src={house.image[0].url}
-          alt={house.title}
-          width={500}
-          height={300}
-        />
-        <p className='description'>{house.description}</p>
-        <div>
-          <p>Date available: {formatDate(house.dateAvailable)}</p>
+      <div className='individual-house'>
+        <h1 className='titleBravo'>{house.title}</h1>
+        <div className='house'>
+          <Image
+            src={house.image[0].url}
+            alt={house.title}
+            width={400}
+            height={325}
+            objectFit='cover'
+          />
+
+          <div className='description'>
+            <p>{house.description}</p>
+          </div>
+        </div>
+        <div className='house-info'>
           <p>
-            Price: £ {house.price}
+            Date available: <strong>{formatDate(house.dateAvailable)}</strong>
+          </p>
+          <p>
+            Price:<strong> £{house.price}</strong>
             {house.type === 'rent' ? (
               <span title='monthly payments'> monthly</span>
             ) : null}
           </p>
-          <p>Bedrooms: {house.bedrooms}</p>
-          <p>Bathrooms: {house.bathrooms}</p>
+          <p>
+            Bedrooms: <strong>{house.bedrooms}</strong>
+          </p>
+          <p>
+            Bathrooms: <strong>{house.bathrooms}</strong>
+          </p>
         </div>
-      </div>
-      <div className='contact'>
-        <h3>Interested</h3>
-        <a href='#'>Email us</a>
+        <HouseLocation house={house} />
       </div>
     </Layout>
   );
