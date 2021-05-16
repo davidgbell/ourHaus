@@ -7,7 +7,7 @@ import { formatDate } from '../../utils/formatDate';
 const house = ({ house }) => {
   return (
     <Layout title={house.title} description={house.description}>
-      <h1 className='title'>{house.title}</h1>
+      <h1 className='titleBravo'>{house.title}</h1>
       <div className='house'>
         <Image
           src={house.image[0].url}
@@ -39,7 +39,7 @@ const house = ({ house }) => {
 export default house;
 
 export const getServerSideProps = async ({ query: { slug } }) => {
-  const res = await fetch(`${API_URL}/houses?slug=${slug}`);
+  const res = await fetch(`http://localhost:1337/houses?slug=${slug}`);
   const house = await res.json();
 
   return {
