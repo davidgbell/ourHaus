@@ -49,7 +49,7 @@ const house = ({ house }) => {
 export default house;
 
 export const getServerSideProps = async ({ query: { slug } }) => {
-  const res = await fetch(`http://localhost:1337/houses?slug=${slug}`);
+  const res = await fetch(`${API_URL}/houses?slug=${slug}`);
   const house = await res.json();
 
   return {

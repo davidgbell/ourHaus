@@ -19,7 +19,7 @@ export const Layout = ({ children, title, keywords, description }) => {
           name='keywords'
           content={keywords ? keywords : 'Apartments, Homes, Houses'}
         />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/house.svg' />
       </Head>
       <Header />
       <main>

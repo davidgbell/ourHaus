@@ -21,11 +21,11 @@ export default houses;
 export const getServerSideProps = async ({ query: { page = 1 } }) => {
   const start = +page === 1 ? 0 : (+page - 1) * PER_PAGE;
 
-  const totalRes = await fetch(`http://localhost:1337/houses/count`);
+  const totalRes = await fetch(`${API_URL}/houses/count`);
   const total = await totalRes.json();
 
   const housesRes = await fetch(
-    `http://localhost:1337/houses?_start=${start}&_limit=${PER_PAGE}`
+    `${API_URL}/houses?_start=${start}&_limit=${PER_PAGE}`
   );
   const houses = await housesRes.json();
 

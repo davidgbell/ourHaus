@@ -37,7 +37,7 @@ export const getServerSideProps = async ({ query: { searchTerm } }) => {
   });
 
   const res = await fetch(`
-  http://localhost:1337/houses?${query}`);
+  ${API_URL}/houses?${query}`);
   const houses = await res.json();
 
   return {

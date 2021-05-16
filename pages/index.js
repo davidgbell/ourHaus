@@ -54,9 +54,7 @@ export default function Home({ houses }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(
-    `http://localhost:1337/houses?featured=true&_limit=3`
-  );
+  const res = await fetch(`${API_URL}/houses?featured=true&_limit=3`);
   const houses = await res.json();
 
   return {

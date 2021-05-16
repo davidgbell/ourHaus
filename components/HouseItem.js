@@ -13,7 +13,9 @@ export const HouseItem = ({ house }) => {
       />
       <div className='house-item-text'>
         <h3>
-          <Link href={`houses/${house.slug}`}>{house.title}</Link>
+          <Link href={`/houses/${house.slug}`}>
+            <a>{house.title}</a>
+          </Link>
         </h3>
         <p>
           <strong> {house.bedrooms}</strong> Bed{' '}

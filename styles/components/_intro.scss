@@ -1,0 +1,27 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 4rem;
+  height: 400px;
+  background-image: url('/images/house-night.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 8rem 1rem;
+  background-position: center;
+
+  .visually-hidden {
+    display: none;
+  }
+
+  .titleBravo {
+    text-align: center;
+    color: $white;
+    margin-bottom: 2rem;
+  }
+  p {
+    text-align: center;
+    color: $white;
+  }
+}

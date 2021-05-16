@@ -18,7 +18,7 @@ const sale = ({ houses }) => {
 export default sale;
 
 export const getStaticProps = async () => {
-  const res = await fetch(`http://localhost:1337/houses?type=sale`);
+  const res = await fetch(`${API_URL}/houses?type=sale`);
   const houses = await res.json();
 
   return {

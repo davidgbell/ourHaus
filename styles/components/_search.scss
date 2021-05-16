@@ -1,0 +1,36 @@
+.search {
+  padding: 2rem 0;
+  input {
+    width: 90vw;
+    max-width: 400px;
+    height: 3rem;
+    border: $accents-2;
+    padding-left: 1rem;
+    font-size: 1.4rem;
+    border-radius: 7px;
+  }
+  button {
+    background: $alpha;
+    color: $white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 0.25rem 1rem;
+    border-radius: 7px;
+    border: none;
+    height: 3rem;
+    margin-top: 1rem;
+    &:hover {
+      background: $alpha-light;
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (min-width: 654px) {
+  .search {
+    button {
+      margin-left: 1rem;
+      margin-top: 0;
+    }
+  }
+}
