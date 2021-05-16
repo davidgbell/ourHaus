@@ -19,10 +19,8 @@ I wanted to keep the app clean and simple as the main focus is to display my abi
 
 [Site](https://ourhaus.vercel.app/)
 
-![Screenshot 1](s1.png)
+![Screenshot 1](/public/s1.png)
 ![Screenshot 2](/public/s2.png)
-![Screenshot 3](/s3.png)
-![Screenshot 4](/s4.png)
-![Screenshot 5](/s5.png)
-
-<img src='s1.png' />
+![Screenshot 3](/public/s3.png)
+![Screenshot 4](/public/s4.png)
+![Screenshot 5](/public/s5.png)
