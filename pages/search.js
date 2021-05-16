@@ -20,12 +20,14 @@ const searchPage = ({ houses, searchTerm }) => {
         </div>
       )}
 
-      <div className='page-wrapper'>
+      <div className='results'>
         {houses.length > 0 && (
           <h2 className='titleBravo'>
             Results for <strong className='searched-term'>{searchTerm}</strong>
           </h2>
         )}
+      </div>
+      <div className='page-wrapper'>
         {houses.map(house => (
           <HouseItem key={house.id} house={house} />
         ))}
