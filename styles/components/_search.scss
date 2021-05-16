@@ -1,5 +1,11 @@
 .search {
   padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .visually-hidden {
+    display: none;
+  }
   input {
     width: 90vw;
     max-width: 400px;
@@ -19,6 +25,7 @@
     border: none;
     height: 3rem;
     margin-top: 1rem;
+    max-width: 100px;
     &:hover {
       background: $alpha-light;
       cursor: pointer;
@@ -28,6 +35,7 @@
 
 @media only screen and (min-width: 654px) {
   .search {
+    display: block;
     button {
       margin-left: 1rem;
       margin-top: 0;

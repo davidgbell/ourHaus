@@ -8,6 +8,7 @@ export const Search = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    // Go to search page after submit
     router.push(`/search?searchTerm=${searchTerm}`);
     setSearchTerm('');
   };

@@ -49,6 +49,7 @@ const house = ({ house }) => {
 export default house;
 
 export const getServerSideProps = async ({ query: { slug } }) => {
+  // get the res of a house matching the slug passed through using next Link / Routing
   const res = await fetch(`${API_URL}/houses?slug=${slug}`);
   const house = await res.json();
 

@@ -18,6 +18,7 @@ const rent = ({ houses }) => {
 export default rent;
 
 export const getStaticProps = async () => {
+  // houses that are set for rent from CMS
   const res = await fetch(`${API_URL}/houses?type=rent`);
   const houses = await res.json();
 

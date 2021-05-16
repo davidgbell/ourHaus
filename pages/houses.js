@@ -19,8 +19,10 @@ const houses = ({ houses, total, page }) => {
 export default houses;
 
 export const getServerSideProps = async ({ query: { page = 1 } }) => {
+  // find first page
   const start = +page === 1 ? 0 : (+page - 1) * PER_PAGE;
 
+  // find count of all houses in API
   const totalRes = await fetch(`${API_URL}/houses/count`);
   const total = await totalRes.json();
 

@@ -3,22 +3,33 @@ import qs from 'qs';
 
 import { HouseItem } from '../components/HouseItem';
 import { Layout } from '../components/Layout';
+import { Search } from '../components/Search';
 import { API_URL } from '../config';
 
-const searchPage = ({ houses }) => {
+const searchPage = ({ houses, searchTerm }) => {
   <Link href='/houses'>Back to houses</Link>;
   return (
     <Layout title='Search results for houses'>
       <h1 className='title'>Search page</h1>
       {houses.length === 0 && (
-        <h3 className='titleBravo'>
-          No houses available to rent or buy with your search term
-        </h3>
+        <div>
+          <Search />
+          <h3 className='titleBravo'>
+            Nothing matches your search of "${searchTerm}"
+          </h3>
+        </div>
       )}
 
-      {houses.map(house => (
-        <HouseItem key={house.id} house={house} />
-      ))}
+      <div className='page-wrapper'>
+        {houses.length > 0 && (
+          <h2 className='titleBravo'>
+            Results for <strong className='searched-term'>{searchTerm}</strong>
+          </h2>
+        )}
+        {houses.map(house => (
+          <HouseItem key={house.id} house={house} />
+        ))}
+      </div>
     </Layout>
   );
 };
@@ -43,6 +54,7 @@ export const getServerSideProps = async ({ query: { searchTerm } }) => {
   return {
     props: {
       houses,
+      searchTerm,
     },
   };
 };

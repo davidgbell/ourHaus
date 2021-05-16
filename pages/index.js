@@ -54,6 +54,7 @@ export default function Home({ houses }) {
 }
 
 export const getStaticProps = async () => {
+  // get first 3 houses that have the featured attribute
   const res = await fetch(`${API_URL}/houses?featured=true&_limit=3`);
   const houses = await res.json();
 

@@ -18,6 +18,7 @@ const sale = ({ houses }) => {
 export default sale;
 
 export const getStaticProps = async () => {
+  // houses that are set for sale from CMS
   const res = await fetch(`${API_URL}/houses?type=sale`);
   const houses = await res.json();
 

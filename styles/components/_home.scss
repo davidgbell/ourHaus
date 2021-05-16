@@ -1,5 +1,4 @@
 .featured {
-  margin-top: 5rem;
   margin-bottom: 7rem;
   h2 {
     font-size: 3rem;
@@ -16,6 +15,7 @@
 
 @media (min-width: 640px) {
   .featured {
+    margin-top: 5rem;
     .grid {
       grid-template-columns: 1fr 1fr 1fr;
     }
