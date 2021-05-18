@@ -1,6 +1,8 @@
 # ourHaus
 
-ourHaus is a portfolio project to showcase the use of Nextjs and Strapi Headless CMS made by David Bell.
+ourHaus is a property website for finding homes for rent or sale.
+
+Made as a portfolio project to showcase the use of Nextjs,React, JavaScript, SASS, Strapi Headless CMS and ability interact with REST API's made by David Bell.
 
 ## Features
 
