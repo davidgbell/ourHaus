@@ -2,9 +2,31 @@
 
 ourHaus is a portfolio project to showcase the use of Nextjs and Strapi Headless CMS made by David Bell.
 
-Comes complete with Search form, statically generated pages and server side rendered pages with pagination. Styled with SASS (CSS pre processor). Map of house locations using Map box and Google maps API.
+## Features
 
-I wanted to keep the app clean and simple as the main focus is to display my ability to interact with API's and create fast dynamic pages out of them.
+### Static and Server Side Rendered Pages
+
+Using nextjs to achieve both statically and server side rendered pages that are quick and boost SEO.
+
+### Dynamic pages
+
+Each house has it's own page dynamically created.
+
+### Maps
+
+Using Mapbox API and Google maps API to display the location of each home on a map.
+
+### Strapi CMS
+
+Strapi CMS was used for managing data. It's a great CMS for decoupling the data in the backend from the front end. The interface is easy to use for even non technological people.
+
+### Styling
+
+I used SASS with this project.
+
+### Pagination
+
+Pagination implemented for user experience and speed.
 
 ## Built with
 
